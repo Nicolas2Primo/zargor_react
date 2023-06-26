@@ -1,0 +1,13 @@
+.contact_poster_background {
+  background: radial-gradient(
+        187.95% 695.48% at 0% 19.36%,
+        rgba(251, 191, 36, 0.3) 0%,
+        rgba(222, 120, 110, 0.273) 22.7%,
+        rgba(197, 58, 174, 0.24) 43.87%,
+        rgba(181, 79, 198, 0.18) 98.53%,
+        rgba(0, 0, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #000000;
+  border-radius: 11.3391px;
+}

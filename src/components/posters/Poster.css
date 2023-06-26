@@ -1,0 +1,8 @@
+.poster_background {
+  background: radial-gradient(
+    circle at 0% 0%,
+    #511475 0%,
+    rgba(105, 44, 106, 0.859177) 51.64%,
+    rgba(138, 77, 90, 0.667829) 100%
+  );
+}
