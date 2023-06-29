@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="w-screen h-full">
+    <div className="w-full h-full overflow-x-hidden">
       <Navbar></Navbar>
       <Home />
     </div>

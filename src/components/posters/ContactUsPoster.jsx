@@ -30,10 +30,13 @@ const ContactUsPosterSteps = ({ steps }) => {
     <>
       {steps == 1 ? (
         <>
-          <span className="font-medium text-[18px] tracking-[0.15rem]">
-            Hi, give us some information about your company
-          </span>
-          <div className="flex gap-[70px]">
+          <div className="text-center">
+            <span className="font-medium text-[12px] md:text-[18px] tracking-[0.15rem]">
+              Hi, give us some information about your company
+            </span>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[70px]">
             {inputContent.map((input) => (
               <Input type={input.type} label={input.label} />
             ))}
@@ -41,12 +44,15 @@ const ContactUsPosterSteps = ({ steps }) => {
         </>
       ) : steps == 2 ? (
         <>
-          <span className="font-medium text-[18px] tracking-[0.15rem]">
-            Now, tell us what kind of service you are looking for
-          </span>
-          <div className="flex gap-[70px]">
+          <div className="text-center">
+            <span className="font-medium text-[12px] md:text-[18px] tracking-[0.15rem]">
+              Now, tell us what kind of service you are looking for
+            </span>
+          </div>
+
+          <div className="flex flex-wrap md:flex-wrap gap-[30px] md:gap-[70px] items-center justify-center">
             {servicesButtons.map((service) => (
-              <button className="w-[85px] h-[85px] text-center bg-white rounded-full bg-opacity-20 text-[13px] font-semibold focus:bg-opacity-25">
+              <button className="w-[75px] h-[75px]  md:w-[85px] md:h-[85px] text-[11px] text-center bg-white rounded-full bg-opacity-20 md:text-[13px] font-semibold focus:bg-opacity-25">
                 {service}
               </button>
             ))}
@@ -54,10 +60,13 @@ const ContactUsPosterSteps = ({ steps }) => {
         </>
       ) : steps == 3 ? (
         <>
-          <span className="font-medium text-[18px] tracking-[0.15rem]">
-            And finally, tell us what specifically you're looking for
-          </span>
-          <div className="flex gap-[70px]">
+          <div className="text-center">
+            <span className="font-medium text-[12px] md:text-[18px] tracking-[0.15rem]">
+              And finally, tell us what specifically you're looking for
+            </span>
+          </div>
+
+          <div className="flex ">
             <Input label={"Content"} type={"text"} steps={steps} />
           </div>
         </>
@@ -72,13 +81,21 @@ const ContactUsPoster = () => {
   const [steps, setSteps] = useState(1);
   return (
     <div className="flex items-center justify-center w-full ">
-      <div className="h-[400px] w-[900px] bg-white contact_poster_background rounded-[11.3391px] ">
-        <div className="flex justify-end w-full pt-8 pr-8 h-7">
-          <span className="text-xs font-medium tracking-[0.15rem] text-white text-opacity-[0.7]">
+      <div className="w-[250px] h-[400px] py-6 md:h-[400px] md:w-[600px] lg:w-[900px] md:w-min-[600px]  contact_poster_background rounded-[11.3391px] flex flex-col  items-center justify-center">
+        <div className="flex justify-end w-full h-full pr-6 ">
+          <span className="text-[11px] md:text-xs font-medium tracking-[0.15rem] text-white text-opacity-[0.7]">
             0{steps}/03
           </span>
         </div>
-        <div className="h-full w-full flex flex-col gap-[35px] items-center justify-center text-opacity-[0.70] text-white">
+        <div
+          className={`h-fit w-full flex flex-col gap-[35px]  ${
+            steps == 3
+              ? "md:pb-0"
+              : steps == 1
+              ? "md:pb-0 lg:pb-10"
+              : "md:pb-10"
+          } items-center justify-center text-opacity-[0.70] text-white `}
+        >
           <ContactUsPosterSteps steps={steps} />
 
           <div className="flex items-center justify-center gap-8">
