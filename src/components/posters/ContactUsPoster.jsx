@@ -81,7 +81,7 @@ const ContactUsPoster = () => {
   const [steps, setSteps] = useState(1);
   return (
     <div className="flex items-center justify-center w-full ">
-      <div className="w-[250px] h-[400px] py-6 md:h-[400px] md:w-[600px] lg:w-[900px] md:w-min-[600px]  contact_poster_background rounded-[11.3391px] flex flex-col  items-center justify-center">
+      <div className="w-[265px] h-[400px] py-6 px-3 md:h-[400px] md:w-[600px] lg:w-[900px] md:w-min-[600px]  contact_poster_background rounded-[11.3391px] flex flex-col  items-center justify-center">
         <div className="flex justify-end w-full h-full pr-6 ">
           <span className="text-[11px] md:text-xs font-medium tracking-[0.15rem] text-white text-opacity-[0.7]">
             0{steps}/03
