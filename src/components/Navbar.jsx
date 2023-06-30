@@ -40,7 +40,9 @@ const Navbar = () => {
     <div className="fixed w-screen h-fit px-[22px] md:px-[48px] flex flex-col items-center justify-between z-10">
       <nav
         className={`fixed w-screen h-[74px] px-[22px] md:px-[48px] flex items-center justify-between z-10 ${
-          scroll ? "bg-black " : "bg-transparent"
+          scroll
+            ? "bg-black "
+            : ` ${menuIsOpen ? "bg-black" : "bg-transparent"}`
         } ease-linear duration-400 transition-colors`}
       >
         <img
