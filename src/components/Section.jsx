@@ -1,5 +1,6 @@
 import React from "react";
 import Poster from "./posters/Poster";
+import PosterSwiper from "./posters/PosterSwiper";
 import AboutPoster from "./posters/AboutPoster";
 import ContactUsPoster from "./posters/ContactUsPoster";
 
@@ -16,7 +17,7 @@ const Section = ({ section_title, section_subtitle, poster, about_poster }) => {
       </div>
       <div className="flex justify-center md:justify-start">
         {poster == true ? (
-          <Poster />
+          <PosterSwiper />
         ) : about_poster == true ? (
           <AboutPoster />
         ) : (

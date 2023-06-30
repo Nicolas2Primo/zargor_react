@@ -1,18 +1,16 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "./Poster.css";
 
-const Poster = () => {
-  const [posters, setPosters] = useState(["Dragonfruit"]);
-
+const Poster = ({ post, link }) => {
   return (
-    <div className="flex gap-[80px] text-white text-[15px] tracking-[0.15rem]">
-      {posters.map((post) => (
-        <div className="flex flex-col">
-          <div className="poster_background w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-[10px]" />
-          <span className="px-2 pt-1">{post}</span>
-        </div>
-      ))}
-    </div>
+    <Link to={link} className="flex flex-col">
+      <div className="poster_background w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-[10px]" />
+      <span className="px-2 pt-1 text-white text-[15px] tracking-[0.15rem] normal-case ">
+        {post}
+      </span>
+    </Link>
   );
 };
 
