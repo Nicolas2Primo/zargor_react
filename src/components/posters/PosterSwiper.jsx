@@ -11,7 +11,7 @@ const PosterSwiper = () => {
     "dragonfruit",
   ]);
   return (
-    <Swiper slidesPerView={1} className="">
+    <Swiper slidesPerView={1} spaceBetween={20} className="">
       {posters.map((post, i) => (
         <SwiperSlide key={i} className="">
           <div className="flex justify-center">
