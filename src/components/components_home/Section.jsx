@@ -1,5 +1,4 @@
 import React from "react";
-import Poster from "./posters/Poster";
 import PosterSwiper from "./posters/PosterSwiper";
 import AboutPoster from "./posters/AboutPoster";
 import ContactUsPoster from "./posters/ContactUsPoster";
