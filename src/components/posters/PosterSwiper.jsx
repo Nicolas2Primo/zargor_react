@@ -10,8 +10,27 @@ const PosterSwiper = () => {
     "dragonfruit",
     "dragonfruit",
   ]);
+
+  const breakpoints = {
+    // quando a tela for menor que 640px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // quando a tela for maior que 640px e menor que 768px
+    590: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // quando a tela for maior que 768px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  };
+
   return (
-    <Swiper slidesPerView={1} spaceBetween={20} className="">
+    <Swiper breakpoints={breakpoints} className="">
       {posters.map((post, i) => (
         <SwiperSlide key={i} className="">
           <div className="flex justify-center">
