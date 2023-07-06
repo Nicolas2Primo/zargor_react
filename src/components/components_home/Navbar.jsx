@@ -57,12 +57,12 @@ const Navbar = () => {
           className="md:hidden"
         />
 
-        <div className="hidden md:flex md:gap-[66px]">
+        <div className="hidden md:flex md:gap-[40px] lg:gap-[66px]">
           {navCenterOptions.map((links) => (
             <button className="text-sm text-white ">{links}</button>
           ))}
         </div>
-        <div className="hidden md:flex md:gap-[66px]">
+        <div className="hidden md:flex md:gap-[45px] lg:gap-[66px]">
           {navRightOptions.map((links) => (
             <ContactUsButton links={links} />
           ))}

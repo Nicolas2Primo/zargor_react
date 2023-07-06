@@ -5,7 +5,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-black radial_gradient">
+    <div className="flex flex-col w-full h-full radial_gradient">
       <HomeSection />
       <Section
         section_title="Services"

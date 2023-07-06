@@ -1,0 +1,7 @@
+.radial-gradien-fruit {
+  background: linear-gradient(
+    311deg,
+    rgba(81, 20, 117, 0.2) 30%,
+    rgba(251, 191, 36, 0.2) 100%
+  );
+}
