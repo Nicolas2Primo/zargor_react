@@ -24,6 +24,10 @@ const PosterSwiper = () => {
     },
     // quando a tela for maior que 768px
     1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1250: {
       slidesPerView: 4,
       spaceBetween: 40,
     },
